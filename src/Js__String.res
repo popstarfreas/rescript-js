@@ -36,8 +36,11 @@ type normalizeForm = [#NFC | #NFD | #NFKC | #NFKD]
 
 @send external repeat: (string, int) => string = "repeat"
 
-@send external replaceString: (string, string, string) => string = "replace"
+@send external replace: (string, string, string) => string = "replace"
 @send external replaceRegExp: (string, Js__RegExp.t, string) => string = "replace"
+
+@send external replaceAll: (string, string, string) => string = "replaceAll"
+@send external replaceAllRegExp: (string, Js__RegExp.t, string) => string = "replaceAll"
 
 @send
 external unsafeReplaceRegExpBy0: (
